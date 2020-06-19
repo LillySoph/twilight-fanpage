@@ -1,0 +1,490 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    cursor: context-menu;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.548);
+}
+
+#bg {
+    background-image: url('bgForestOpacity.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    background-size: 2000px;
+    position: sticky;
+    top: 0;
+    margin: 0 0 10px 0;
+    padding: 15px 0;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#storyMenu, 
+#charMenu,
+#trailerMenu,
+#quizMenu {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    margin: 5px 30px;
+    width: 18 0px;
+    border-radius: 2px;
+    font-weight: 550;
+    color: rgba(255, 250, 250, 0.815);
+    user-select: none;
+    padding: 5px;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+    text-decoration: none;
+}
+
+img#logo {
+    width: 200px;
+}
+
+#logo,
+#storyMenu, 
+#charMenu,
+#trailerMenu,
+#quizMenu {
+    cursor: pointer;
+}
+
+#storyMenu:hover, 
+#charMenu:hover,
+#trailerMenu:hover,
+#quizMenu:hover {
+    background: rgba(255, 255, 255, 0.151);
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 22px "Lato", sans-serif;
+}
+
+b {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font: 18px "Lato", sans-serif;
+    font-weight: 600;
+    color: rgb(40, 46, 52);
+}
+
+p {
+    margin: 6px 15px;
+    font-size: 17px;
+}
+
+#content,
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#content {
+    height: 70%;
+    justify-content: flex-start;
+}
+
+.contentItem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #111;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#quote {
+    display: flex;
+    align-items: flex-end;
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    color: #ddd;
+    margin: 0 0 15px 0;
+}
+
+#quoteContent {
+    text-align: center;
+    background-color: rgba(40, 46, 52, 0.781);  
+    padding: 10px 10px;
+}
+
+#home,
+#storyContent,
+#charContent,
+#quizContent,
+#trailerContent {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.534);
+    margin: 10px 80px 0 80px;
+    overflow: auto;
+}
+
+#trailerContent {
+    padding: 30px;
+}
+
+#quizContent,
+#quiz {
+    flex-direction: column;
+    /*padding: 30px 0 0 0;*/
+    padding: 10px 20px;
+    width: 50%;
+    height: 40%;
+    align-items: center;
+    height: auto;
+}
+
+#home {
+    display: flex;
+}
+
+#quizButton {
+    margin: 30px 0;
+    padding: 10px;
+    border: solid rgba(40, 46, 52, 0.781);
+    font: 30px "Lato", sans-serif;
+    cursor: pointer;
+}
+
+#quizButton:hover,
+#answer1:hover,
+#answer2:hover,
+#answer3:hover,
+#exitQuiz:hover {
+    color: #ddd;
+    border: solid rgba(255, 255, 255, 0);
+    background-color: rgba(40, 46, 52, 0.781);
+}
+
+#answer1:hover,
+#answer2:hover,
+#answer3:hover,
+#exitQuiz:hover {
+    border: none;
+}
+
+
+#quiz,
+#exitQuiz {
+    display: none;
+    text-align: center;
+}
+
+#question,
+#answer1,
+#answer2,
+#answer3,
+#exitQuiz {
+    background-color: rgba(255, 255, 255, 0.534);
+    padding: 20px;
+}
+
+#question {
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    align-items: center;
+}
+
+#answers,
+#exitQuiz {
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font: 18px "Lato", sans-serif;
+}
+
+#answer1,
+#answer2,
+#answer3,
+#exitQuiz {
+    text-align: center;
+    margin: 30px 0;
+    text-transform: none;
+    cursor: pointer;
+}
+
+#quizGIF {
+    margin: 0 30px;
+    width: 500px;
+}
+
+#exitQuiz {
+    padding: 20px;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(133, 10, 10);
+    text-decoration: underline;
+}
+/*
+@media only screen and (min-width: 288px) {
+    #home,
+    #storyContent,
+    #charContent,
+    #quizContent,
+    #trailerContent {
+        margin: 0 20px;
+    }
+
+    #banner {
+        margin: 0;
+        padding: 0;
+    }
+
+    #quote {
+        margin: 0;
+        font-size: 11px;
+        padding: 10px 10px;
+        height: 85px;
+    }
+
+    #trailerContent {
+        padding: 10px;
+    }
+
+    h3 {
+        font: 18px "Lato", sans-serif;
+    }
+
+    #content {
+        height: 50%;
+    }
+
+    #quizContent {
+        width: 280px;
+    }
+
+    iframe {
+        width: 280px;
+        height: 157.5px;
+    }
+
+    #quiz {
+        padding: 0;
+    }
+
+    #question {
+        margin: 0;
+        font: 16px "Lato", sans-serif;
+    }
+
+    #quizGIF {
+        width: 200px;
+        height: auto;
+    }
+
+    #quizButton {
+        font: 20px "Lato", sans-serif;
+        margin: 20px 0;
+    }
+
+    #storyMenu,
+    #charMenu,
+    #quizMenu,
+    #trailerMenu {
+        font-size: 18px;
+        margin: 5px 10px
+    }
+
+    img {
+        width: 150px;
+    }
+
+    #right {
+        padding: 0 5px 5px 5px; 
+    }
+
+    #answer1,
+    #answer2,
+    #answer3,
+    #question {
+        margin: 7px 0;
+        padding: 7px;
+        width: 280px;
+    }
+}
+
+/* Small devices (potraits phones) 
+@media only screen and (min-width: 356px) {
+
+    #home,
+    #storyContent,
+    #charContent,
+    #quizContent,
+    #trailerContent {
+        margin: 0 20px;
+    }
+
+    #banner {
+        margin: 0;
+        padding: 0;
+    }
+
+    #quote {
+        margin: 0;
+        font-size: 12px;
+        padding: 10px 10px;
+        height: 85px;
+    }
+
+    #trailerContent {
+        padding: 10px;
+    }
+
+    h3 {
+        font: 18px "Lato", sans-serif;
+    }
+
+    #content {
+        height: 50%;
+    }
+
+    #quizContent {
+        width: 280px;
+    }
+
+    iframe {
+        width: 280px;
+        height: 157.5px;
+    }
+
+    #quiz {
+        padding: 0;
+    }
+
+    #question {
+        margin: 0;
+        font: 16px "Lato", sans-serif;
+    }
+
+    #quizGIF {
+        width: 200px;
+        height: auto;
+    }
+
+    #quizButton {
+        font: 20px "Lato", sans-serif;
+        margin: 20px 0;
+    }
+
+    #storyMenu,
+    #charMenu,
+    #quizMenu,
+    #trailerMenu {
+        font-size: 25px;
+        margin: 5px 10px
+    }
+
+
+    img#logo {
+        width: 130px;
+    }
+
+    #left {
+        width: auto;
+    }
+
+    #answer1,
+    #answer2,
+    #answer3,
+    #question {
+        margin: 7px 0;
+        padding: 7px;
+        width: 280px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) 
+@media only screen and (orientation: landscape) and (min-width: 670px) and (max-width: ) {
+    #left {
+        margin: 5px;
+    }
+
+    #storyMenu,
+    #charMenu,
+    #quizMenu,
+    #trailerMenu {
+        font-size: 23px;
+        margin: 5px 10px
+    }
+
+    #quote {
+        height: 65px;
+    }
+
+    #content {
+        height: 55%;
+    }
+
+    img {
+        width: 130px;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (desktops, 992px and up) 
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {
+
+}
