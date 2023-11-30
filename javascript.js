@@ -20,12 +20,13 @@ function generateQuote() {
     ];
 
     for (var i = Math.floor(Math.random() * (quotes.length));;) {
+        console.log(i, quotes[i])
         return quotes[i];
     }
 }
 
-document.getElementById("quoteContent").innerHTML = "Ich habe nie groß darüber nachgedacht, wie ich sterben würde. Aber anstelle von jemandem zu sterben, den man liebt, scheint mir ein guter Weg zu sein, um zu gehen.";
-/* document.getElementById("quoteContent").innerHTML = generateQuote(); */
+//document.getElementById("quoteContent").innerHTML = "Ich habe nie groß darüber nachgedacht, wie ich sterben würde. Aber anstelle von jemandem zu sterben, den man liebt, scheint mir ein guter Weg zu sein, um zu gehen.";
+document.getElementById("quoteContent").innerHTML = generateQuote();
 
 var allContent = ["home", "storyContent", "charContent", "quizContent", "quiz", "trailerContent"];
 
